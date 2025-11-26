@@ -24,22 +24,3 @@ The grid is generated and printed using Python’s `print` function and `f-strin
 
 ---
 
-## **Code Example**
-
-Here’s a Python script that generates the grid and prints it to the terminal:
-
-```
-# Function to generate and print the grid with coordinates
-def print_grid():
-    grid_size = 10  # Grid size: 10x10
-    n = 1  # Starting point for coordinates (n1)
-    
-    # Create the grid as a matrix of coordinates
-    grid = [[f"n{n + i + j * grid_size}" for i in range(grid_size)] for j in range(grid_size)]
-    
-    # Print the grid row by row
-    for row in grid:
-        print(" ".join(row))
-
-# Call the function to display the grid
-print_grid()
