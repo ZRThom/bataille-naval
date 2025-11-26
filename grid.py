@@ -1,92 +1,58 @@
-
 #------------------------------------------------------------#
 #----definition of the variables used for the coordinates----#
 #------------------------------------------------------------#
 
-n1 = n2 = n3 = n4 = n5 = n6 = n7 = n8 = n9 = n10 = 0
-n11 = n12 = n13 = n14 = n15 = n16 = n17 = n18 = n19 = n20 = 0
-n21 = n22 = n23 = n24 = n25 = n26 = n27 = n28 = n29 = n30 = 0
-n31 = n32 = n33 = n34 = n35 = n36 = n37 = n38 = n39 = n40 = 0
-n41 = n42 = n43 = n44 = n45 = n46 = n47 = n48 = n49 = n50 = 0
-n51 = n52 = n53 = n54 = n55 = n56 = n57 = n58 = n59 = n60 = 0
-n61 = n62 = n63 = n64 = n65 = n66 = n67 = n68 = n69 = n70 = 0
-n71 = n72 = n73 = n74 = n75 = n76 = n77 = n78 = n79 = n80 = 0
-n81 = n82 = n83 = n84 = n85 = n86 = n87 = n88 = n89 = n90 = 0
-n91 = n92 = n93 = n94 = n95 = n96 = n97 = n98 = n99 = n100 = 0
+#Definition of the grid in dictionary form for placing (example: A1) as unencrypted coordinates 
+grille = {}
+letters = "ABCDEFGHIJ"
 
+for l in letters:
+    for n in range(1, 11):
+        coord = f"{l}{n}"
+        grille[coord] = 0
 
-m1 = m2 = m3 = m4 = m5 = m6 = m7 = m8 = m9 = m10 = 0
-m11 = m12 = m13 = m14 = m15 = m16 = m17 = m18 = m19 = m20 = 0
-m21 = m22 = m23 = m24 = m25 = m26 = m27 = m28 = m29 = m30 = 0
-m31 = m32 = m33 = m34 = m35 = m36 = m37 = m38 = m39 = m40 = 0
-m41 = m42 = m43 = m44 = m45 = m46 = m47 = m48 = m49 = m50 = 0
-m51 = m52 = m53 = m54 = m55 = m56 = m57 = m58 = m59 = m60 = 0
-m61 = m62 = m63 = m64 = m65 = m66 = m67 = m68 = m69 = m70 = 0
-m71 = m72 = m73 = m74 = m75 = m76 = m77 = m78 = m79 = m80 = 0
-m81 = m82 = m83 = m84 = m85 = m86 = m87 = m88 = m89 = m90 = 0
-m91 = m92 = m93 = m94 = m95 = m96 = m97 = m98 = m99 = m100 = 0
 
 #-------------------------------------------------------------#
 #---------creation of the matrix for player one---------------#
 #-------------------------------------------------------------#
-A = [
-    [n1,  n2,  n3,  n4,  n5,  n6,  n7,  n8,  n9,  n10],
-    [n11, n12, n13, n14, n15, n16, n17, n18, n19, n20],
-    [n21, n22, n23, n24, n25, n26, n27, n28, n29, n30],
-    [n31, n32, n33, n34, n35, n36, n37, n38, n39, n40],
-    [n41, n42, n43, n44, n45, n46, n47, n48, n49, n50],
-    [n51, n52, n53, n54, n55, n56, n57, n58, n59, n60],
-    [n61, n62, n63, n64, n65, n66, n67, n68, n69, n70],
-    [n71, n72, n73, n74, n75, n76, n77, n78, n79, n80],
-    [n81, n82, n83, n84, n85, n86, n87, n88, n89, n90],
-    [n91, n92, n93, n94, n95, n96, n97, n98, n99, n100]
-]
 
-
+#the grid is called to reference the dictionary as for the string f
 
 def print_gridP1():
-    print(f"      A1  A2  A3  A4  A5  A6  A7  A8  A9  A10")
-    print(f" B1  | {A[0][0]} | {A[0][1]} | {A[0][2]} | {A[0][3]} | {A[0][4]} | {A[0][5]} | {A[0][6]} | {A[0][7]} | {A[0][8]} | {A[0][9]} |")
-    print(f" B2  | {A[1][0]} | {A[1][1]} | {A[1][2]} | {A[1][3]} | {A[1][4]} | {A[1][5]} | {A[1][6]} | {A[1][7]} | {A[1][8]} | {A[1][9]} |")
-    print(f" B3  | {A[2][0]} | {A[2][1]} | {A[2][2]} | {A[2][3]} | {A[2][4]} | {A[2][5]} | {A[2][6]} | {A[2][7]} | {A[2][8]} | {A[2][9]} |")
-    print(f" B4  | {A[3][0]} | {A[3][1]} | {A[3][2]} | {A[3][3]} | {A[3][4]} | {A[3][5]} | {A[3][6]} | {A[3][7]} | {A[3][8]} | {A[3][9]} |")
-    print(f" B5  | {A[4][0]} | {A[4][1]} | {A[4][2]} | {A[4][3]} | {A[4][4]} | {A[4][5]} | {A[4][6]} | {A[4][7]} | {A[4][8]} | {A[4][9]} |")
-    print(f" B6  | {A[5][0]} | {A[5][1]} | {A[5][2]} | {A[5][3]} | {A[5][4]} | {A[5][5]} | {A[5][6]} | {A[5][7]} | {A[5][8]} | {A[5][9]} |")
-    print(f" B7  | {A[6][0]} | {A[6][1]} | {A[6][2]} | {A[6][3]} | {A[6][4]} | {A[6][5]} | {A[6][6]} | {A[6][7]} | {A[6][8]} | {A[6][9]} |")
-    print(f" B8  | {A[7][0]} | {A[7][1]} | {A[7][2]} | {A[7][3]} | {A[7][4]} | {A[7][5]} | {A[7][6]} | {A[7][7]} | {A[7][8]} | {A[7][9]} |")
-    print(f" B9  | {A[8][0]} | {A[8][1]} | {A[8][2]} | {A[8][3]} | {A[8][4]} | {A[8][5]} | {A[8][6]} | {A[8][7]} | {A[8][8]} | {A[8][9]} |")
-    print(f" B10 | {A[9][0]} | {A[9][1]} | {A[9][2]} | {A[9][3]} | {A[9][4]} | {A[9][5]} | {A[9][6]} | {A[9][7]} | {A[9][8]} | {A[9][9]} |")
+    print(f"      1  2  3  4  5  6  7  8  9  10")
+    print(f" A  | {grille['A1']} | {grille['A2']} | {grille['A3']} | {grille['A4']} | {grille['A5']} | {grille['A6']} | {grille['A7']} | {grille['A8']} | {grille['A9']} | {grille['A10']} |")
+    print(f" B  | {grille['B1']} | {grille['B2']} | {grille['B3']} | {grille['B4']} | {grille['B5']} | {grille['B6']} | {grille['B7']} | {grille['B8']} | {grille['B9']} | {grille['B10']} |")
+    print(f" C  | {grille['C1']} | {grille['C2']} | {grille['C3']} | {grille['C4']} | {grille['C5']} | {grille['C6']} | {grille['C7']} | {grille['C8']} | {grille['C9']} | {grille['C10']} |")
+    print(f" D  | {grille['D1']} | {grille['D2']} | {grille['D3']} | {grille['D4']} | {grille['D5']} | {grille['D6']} | {grille['D7']} | {grille['D8']} | {grille['D9']} | {grille['D10']} |")
+    print(f" E  | {grille['E1']} | {grille['E2']} | {grille['E3']} | {grille['E4']} | {grille['E5']} | {grille['E6']} | {grille['E7']} | {grille['E8']} | {grille['E9']} | {grille['E10']} |")
+    print(f" F  | {grille['F1']} | {grille['F2']} | {grille['F3']} | {grille['F4']} | {grille['F5']} | {grille['F6']} | {grille['F7']} | {grille['F8']} | {grille['F9']} | {grille['F10']} |")
+    print(f" G  | {grille['G1']} | {grille['G2']} | {grille['G3']} | {grille['G4']} | {grille['G5']} | {grille['G6']} | {grille['G7']} | {grille['G8']} | {grille['G9']} | {grille['G10']} |")
+    print(f" H  | {grille['H1']} | {grille['H2']} | {grille['H3']} | {grille['H4']} | {grille['H5']} | {grille['H6']} | {grille['H7']} | {grille['H8']} | {grille['H9']} | {grille['H10']} |")
+    print(f" I  | {grille['I1']} | {grille['I2']} | {grille['I3']} | {grille['I4']} | {grille['I5']} | {grille['I6']} | {grille['I7']} | {grille['I8']} | {grille['I9']} | {grille['I10']} |")
+    print(f" J  | {grille['J1']} | {grille['J2']} | {grille['J3']} | {grille['J4']} | {grille['J5']} | {grille['J6']} | {grille['J7']} | {grille['J8']} | {grille['J9']} | {grille['J10']} |")
+
 
 #-------------------------------------------------------------#
 #---------creation of the matrix for player two---------------#
 #-------------------------------------------------------------#
 
-B = [
-    [m1,  m2,  m3,  m4,  m5,  m6,  m7,  m8,  m9,  m10],
-    [m11, m12, m13, m14, m15, m16, m17, m18, m19, m20],
-    [m21, m22, m23, m24, m25, m26, m27, m28, m29, m30],
-    [m31, m32, m33, m34, m35, m36, m37, m38, m39, m40],
-    [m41, m42, m43, m44, m45, m46, m47, m48, m49, m50],
-    [m51, m52, m53, m54, m55, m56, m57, m58, m59, m60],
-    [m61, m62, m63, m64, m65, m66, m67, m68, m69, m70],
-    [m71, m72, m73, m74, m75, m76, m77, m78, m79, m80],
-    [m81, m82, m83, m84, m85, m86, m87, m88, m89, m90],
-    [m91, m92, m93, m94, m95, m96, m97, m98, m99, m100]
-]
-
+#the grid is called to reference the dictionary as for the string f
 
 def print_gridP2():
-    print(f"      A1  A2  A3  A4  A5  A6  A7  A8  A9  A10")
-    print(f" B1  | {B[0][0]} | {B[0][1]} | {B[0][2]} | {B[0][3]} | {B[0][4]} | {B[0][5]} | {B[0][6]} | {B[0][7]} | {B[0][8]} | {B[0][9]} |")
-    print(f" B2  | {B[1][0]} | {B[1][1]} | {B[1][2]} | {B[1][3]} | {B[1][4]} | {B[1][5]} | {B[1][6]} | {B[1][7]} | {B[1][8]} | {B[1][9]} |")
-    print(f" B3  | {B[2][0]} | {B[2][1]} | {B[2][2]} | {B[2][3]} | {B[2][4]} | {B[2][5]} | {B[2][6]} | {B[2][7]} | {B[2][8]} | {B[2][9]} |")
-    print(f" B4  | {B[3][0]} | {B[3][1]} | {B[3][2]} | {B[3][3]} | {B[3][4]} | {B[3][5]} | {B[3][6]} | {B[3][7]} | {B[3][8]} | {B[3][9]} |")
-    print(f" B5  | {B[4][0]} | {B[4][1]} | {B[4][2]} | {B[4][3]} | {B[4][4]} | {B[4][5]} | {B[4][6]} | {B[4][7]} | {B[4][8]} | {B[4][9]} |")
-    print(f" B6  | {B[5][0]} | {B[5][1]} | {B[5][2]} | {B[5][3]} | {B[5][4]} | {B[5][5]} | {B[5][6]} | {B[5][7]} | {B[5][8]} | {B[5][9]} |")
-    print(f" B7  | {B[6][0]} | {B[6][1]} | {B[6][2]} | {B[6][3]} | {B[6][4]} | {B[6][5]} | {B[6][6]} | {B[6][7]} | {B[6][8]} | {B[6][9]} |")
-    print(f" B8  | {B[7][0]} | {B[7][1]} | {B[7][2]} | {B[7][3]} | {B[7][4]} | {B[7][5]} | {B[7][6]} | {B[7][7]} | {B[7][8]} | {B[7][9]} |")
-    print(f" B9  | {B[8][0]} | {B[8][1]} | {B[8][2]} | {B[8][3]} | {B[8][4]} | {B[8][5]} | {B[8][6]} | {B[8][7]} | {B[8][8]} | {B[8][9]} |")
-    print(f" B10 | {B[9][0]} | {B[9][1]} | {B[9][2]} | {B[9][3]} | {B[9][4]} | {B[9][5]} | {B[9][6]} | {B[9][7]} | {B[9][8]} | {B[9][9]} |")
+    print(f"      1  2  3  4  5  6  7  8  9  10")
+    print(f" A  | {grille['A1']} | {grille['A2']} | {grille['A3']} | {grille['A4']} | {grille['A5']} | {grille['A6']} | {grille['A7']} | {grille['A8']} | {grille['A9']} | {grille['A10']} |")
+    print(f" B  | {grille['B1']} | {grille['B2']} | {grille['B3']} | {grille['B4']} | {grille['B5']} | {grille['B6']} | {grille['B7']} | {grille['B8']} | {grille['B9']} | {grille['B10']} |")
+    print(f" C  | {grille['C1']} | {grille['C2']} | {grille['C3']} | {grille['C4']} | {grille['C5']} | {grille['C6']} | {grille['C7']} | {grille['C8']} | {grille['C9']} | {grille['C10']} |")
+    print(f" D  | {grille['D1']} | {grille['D2']} | {grille['D3']} | {grille['D4']} | {grille['D5']} | {grille['D6']} | {grille['D7']} | {grille['D8']} | {grille['D9']} | {grille['D10']} |")
+    print(f" E  | {grille['E1']} | {grille['E2']} | {grille['E3']} | {grille['E4']} | {grille['E5']} | {grille['E6']} | {grille['E7']} | {grille['E8']} | {grille['E9']} | {grille['E10']} |")
+    print(f" F  | {grille['F1']} | {grille['F2']} | {grille['F3']} | {grille['F4']} | {grille['F5']} | {grille['F6']} | {grille['F7']} | {grille['F8']} | {grille['F9']} | {grille['F10']} |")
+    print(f" G  | {grille['G1']} | {grille['G2']} | {grille['G3']} | {grille['G4']} | {grille['G5']} | {grille['G6']} | {grille['G7']} | {grille['G8']} | {grille['G9']} | {grille['G10']} |")
+    print(f" H  | {grille['H1']} | {grille['H2']} | {grille['H3']} | {grille['H4']} | {grille['H5']} | {grille['H6']} | {grille['H7']} | {grille['H8']} | {grille['H9']} | {grille['H10']} |")
+    print(f" I  | {grille['I1']} | {grille['I2']} | {grille['I3']} | {grille['I4']} | {grille['I5']} | {grille['I6']} | {grille['I7']} | {grille['I8']} | {grille['I9']} | {grille['I10']} |")
+    print(f" J  | {grille['J1']} | {grille['J2']} | {grille['J3']} | {grille['J4']} | {grille['J5']} | {grille['J6']} | {grille['J7']} | {grille['J8']} | {grille['J9']} | {grille['J10']} |")
+
+
+
 
 
 #-------------------------------------------------------------#
@@ -94,4 +60,5 @@ def print_gridP2():
 #-------------------------------------------------------------#
 print_gridP1()
 print_gridP2()
+
 
