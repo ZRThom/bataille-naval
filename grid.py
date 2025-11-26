@@ -44,7 +44,7 @@ A = [
 
 
 
-def print_gridJ1():
+def print_gridP1():
     print(f"      A1  A2  A3  A4  A5  A6  A7  A8  A9  A10")
     print(f" B1  | {A[0][0]} | {A[0][1]} | {A[0][2]} | {A[0][3]} | {A[0][4]} | {A[0][5]} | {A[0][6]} | {A[0][7]} | {A[0][8]} | {A[0][9]} |")
     print(f" B2  | {A[1][0]} | {A[1][1]} | {A[1][2]} | {A[1][3]} | {A[1][4]} | {A[1][5]} | {A[1][6]} | {A[1][7]} | {A[1][8]} | {A[1][9]} |")
@@ -89,7 +89,9 @@ def print_gridP2():
     print(f" B10 | {B[9][0]} | {B[9][1]} | {B[9][2]} | {B[9][3]} | {B[9][4]} | {B[9][5]} | {B[9][6]} | {B[9][7]} | {B[9][8]} | {B[9][9]} |")
 
 
-
-print_gridJ1() #print the board for the player 1
-print_gridJ2() #print the board for the player 2
+#-------------------------------------------------------------#
+#---------printing ---------------#
+#-------------------------------------------------------------#
+print_gridP1() #print the board for the player 1
+print_gridP2() #print the board for the player 2
 
