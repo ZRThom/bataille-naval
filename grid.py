@@ -22,7 +22,7 @@ for l in letters:
 #col = the column number on the grid (1, 2, …, 10)
 
 def print_gridP1():
-    print(f"      1  2  3  4  5  6  7  8  9  10")
+    print(f"    1    2   3   4   5   6   7   8   9   10")
     print(f" A | {grille['A1']} | {grille['A2']} | {grille['A3']} | {grille['A4']} | {grille['A5']} | {grille['A6']} | {grille['A7']} | {grille['A8']} | {grille['A9']} | {grille['A10']} |")
     print(f" B | {grille['B1']} | {grille['B2']} | {grille['B3']} | {grille['B4']} | {grille['B5']} | {grille['B6']} | {grille['B7']} | {grille['B8']} | {grille['B9']} | {grille['B10']} |")
     print(f" C | {grille['C1']} | {grille['C2']} | {grille['C3']} | {grille['C4']} | {grille['C5']} | {grille['C6']} | {grille['C7']} | {grille['C8']} | {grille['C9']} | {grille['C10']} |")
@@ -44,7 +44,7 @@ def print_gridP1():
 #col = the column number on the grid (1, 2, …, 10)
 
 def print_gridP2():
-    print(f"      1  2  3  4  5  6  7  8  9  10")
+    print(f"    1    2   3   4   5   6   7   8   9   10")
     print(f" A | {grille['A1']} | {grille['A2']} | {grille['A3']} | {grille['A4']} | {grille['A5']} | {grille['A6']} | {grille['A7']} | {grille['A8']} | {grille['A9']} | {grille['A10']} |")
     print(f" B | {grille['B1']} | {grille['B2']} | {grille['B3']} | {grille['B4']} | {grille['B5']} | {grille['B6']} | {grille['B7']} | {grille['B8']} | {grille['B9']} | {grille['B10']} |")
     print(f" C | {grille['C1']} | {grille['C2']} | {grille['C3']} | {grille['C4']} | {grille['C5']} | {grille['C6']} | {grille['C7']} | {grille['C8']} | {grille['C9']} | {grille['C10']} |")
@@ -55,7 +55,6 @@ def print_gridP2():
     print(f" H | {grille['H1']} | {grille['H2']} | {grille['H3']} | {grille['H4']} | {grille['H5']} | {grille['H6']} | {grille['H7']} | {grille['H8']} | {grille['H9']} | {grille['H10']} |")
     print(f" I | {grille['I1']} | {grille['I2']} | {grille['I3']} | {grille['I4']} | {grille['I5']} | {grille['I6']} | {grille['I7']} | {grille['I8']} | {grille['I9']} | {grille['I10']} |")
     print(f" J | {grille['J1']} | {grille['J2']} | {grille['J3']} | {grille['J4']} | {grille['J5']} | {grille['J6']} | {grille['J7']} | {grille['J8']} | {grille['J9']} | {grille['J10']} |")
-
 
 
 
