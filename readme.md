@@ -23,3 +23,4 @@ The grid is generated and printed using Python’s `print` function and `f-strin
    - The matrix is converted into a **1D array** (a list) of coordinates, making it easier to process and access.
 
 ---
+
