@@ -1,5 +1,4 @@
 from grid import *
-from attack import *
 
 
 #-------------------------------------------------------------#
@@ -114,6 +113,5 @@ cruiser(grill2)
 destroyer(grill2)
 submarine(grill2)
 torpedo_boat(grill2)
-
 print("Grille du joueur 2 après placement des bateaux :")
 print_gridP2() 
