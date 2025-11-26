@@ -90,8 +90,8 @@ def print_gridP2():
 
 
 #-------------------------------------------------------------#
-#---------printing ---------------#
+#-----------------------printing grids------------------------#
 #-------------------------------------------------------------#
-print_gridP1() #print the board for the player 1
-print_gridP2() #print the board for the player 2
+print_gridP1()
+print_gridP2()
 
