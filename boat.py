@@ -104,7 +104,7 @@ def input_boat(name, size, grid):
             continue
         
         if not is_valid_placement(start, size, orientation, grid):
-            print("Placement impossible.")
+            print("Incorrect placement.")
             continue
         
         place_boat(start, size, orientation, name[0].upper(), grid)
@@ -126,14 +126,14 @@ def torpedo_boat(grid):     input_boat("Torpilleur", 2, grid)
 #--------------------- Placement J1 ---------------------------#
 #-------------------------------------------------------------#
 
-print("Placement des bateaux pour Joueur 1 :")
+print("Boat placement of player 1 :")
 aircraft_carrier(grille)
 cruiser(grille)
 destroyer(grille)
 submarine(grille)
 torpedo_boat(grille)
 
-print("\nGrille du Joueur 1 :")
+print("\nPlayer's 1 grid :")
 print_gridP1()
 
 
@@ -141,14 +141,14 @@ print_gridP1()
 #--------------------- Placement J2 ---------------------------#
 #-------------------------------------------------------------#
 
-print("\nPlacement des bateaux pour Joueur 2 :")
+print("\nBoat placement of player 1 :")
 aircraft_carrier(grill2)
 cruiser(grill2)
 destroyer(grill2)
 submarine(grill2)
 torpedo_boat(grill2)
 
-print("\nGrille du Joueur 2 :")
+print("\nPlayer's 2 grid :")
 print_gridP2()
 
 
@@ -156,7 +156,7 @@ print_gridP2()
 #------------------------ JEU --------------------------------#
 #-------------------------------------------------------------#
 
-print("\n=== GAME START ===")
+print("\n=== GAME START NOW ===")
 
 while True:
 
