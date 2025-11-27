@@ -1,48 +1,42 @@
-# Battleship Game Rules
+# Documentation Branch — FULL COMMENTS
 
-**Battleship** is a strategy game played between two players. Each player has a grid (usually 10x10) on which they place their ships and try to guess the locations of the opponent’s ships. The goal of the game is to sink all of the opponent’s ships before they sink yours.
+This branch provides a complete, line-by-line explanation of the project's code.  
+Its purpose is to help new developers understand how the program works, even if they did not participate in writing the original code.
 
-## Materials
+---
 
-Each player has:
-- One 10x10 grid.
-- 5 ships of different sizes:
-  - 1 Aircraft Carrier (5 cells)
-  - 1 Battleship (4 cells)
-  - 1 Cruiser (3 cells)
-  - 1 Submarine (3 cells)
-  - 1 Destroyer (2 cells)
+## Purpose of This Branch
 
-## Game Setup
+- Provide detailed explanations for every part of the code  
+- Help new contributors quickly understand the structure and logic of the project  
+- Serve as a reference for future maintenance, debugging, and improvements  
+- Make onboarding easier with clear documentation written directly in the code  
 
-1. **Placing Ships**: Each player secretly places their ships on their grid. Ships may be placed horizontally or vertically, but **not diagonally**.
-2. Ships must not overlap and must not touch each other (optional rule depending on game version).
-3. Ship placement must remain **hidden** from the opponent.
+---
 
-## How to Play
+## Contents of This Branch
 
-1. **Taking Turns**: Players take turns calling out a coordinate on the opponent’s grid (e.g., `A5`) to fire a shot.
-2. **Opponent's Response**:
-   - If the shot hits a ship, the opponent announces **"Hit"**.
-   - If the shot misses, the opponent announces **"Miss"** (or "Water").
-3. When all cells of a ship have been hit, the opponent announces **"Ship sunk"**.
+- Line-by-line comments across all major files  
+- Explanations of variables, data structures, and functions  
+- Clarification of the program flow and logic  
+- Notes to prevent misunderstandings or implementation errors  
+- Clean and consistent formatting to improve readability  
 
-## End of the Game
+---
 
-The game ends when one player has successfully sunk all of the opponent’s ships.  
-The player who sinks all enemy ships first is declared the winner.
+## Intended Audience
 
-## Additional Rules
+This documentation is created for:
 
-- **One shot per turn.** A player may not fire at the same coordinate twice.
-- **Ship visibility:** Once a ship is sunk, the entire ship’s position is revealed (optional).
-- **Fair play:** Players must follow placement and shooting rules—no cheating.
-- **Optional rule:** Add sonar or radar abilities for more advanced gameplay.
+- Developers newly joining the project  
+- Contributors who did not participate in the initial development  
+- Anyone needing to understand the internal workings of the codebase  
+- Developers preparing to refactor, extend, or debug the project  
 
-## Strategy Tips
+---
 
-- Vary ship placement to make your layout harder to guess.
-- Avoid placing ships too close together, unless you want to mislead your opponent.
-- Keep track of previous shots to predict your opponent’s strategy.
+## How to Use This Documentation
 
-Good luck and have fun!
+- Read through the commented code to understand the project step by step  
+- Use this branch as a learning resource before modifying or expanding the code  
+- Refer back to it whenever clarification is required  
