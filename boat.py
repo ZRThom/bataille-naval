@@ -145,29 +145,3 @@ torpedo_boat(grill2)
 print("\nPlayer 2 grid:")
 print_gridP2()
  
-#-------------------------------------------------------------#
-#--------------------------- GAME -----------------------------#
-#-------------------------------------------------------------#
-
-print("\n=== GAME START NOW ===")
-
-while True:
-
-    # ----------------------- TURN P1 ------------------------
-    print("\n--- Player 1 Turn ---")
-    shots_gridP2()
-    shoot(grill2, shots2)
-
-    # Player 1 victory?
-    if all(v == 0 or v == "x" for v in grill2.values()):
-        print("Player 1 wins!")
-        break
-
-    # ----------------------- TURN P2 ------------------------
-    print("\n--- Player 2 Turn ---")
-    shots_gridP1()
-    shoot(grille, shot1)
-
-    if all(v == 0 or v == "x" for v in grille.values()):
-        print("Player 2 wins!")
-        break
