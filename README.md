@@ -1,48 +1,62 @@
-# Battleship Game Rules
+# Boat Placement Preparation Branch — README
 
-**Battleship** is a strategy game played between two players. Each player has a grid (usually 10x10) on which they place their ships and try to guess the locations of the opponent’s ships. The goal of the game is to sink all of the opponent’s ships before they sink yours.
+This branch focuses on the **pre-game setup** by implementing the logic to **place boats on the grids** for both players.  
+Its purpose is to ensure that all ships are correctly positioned before the game begins, allowing a consistent and fair start.
 
-## Materials
+---
 
-Each player has:
-- One 10x10 grid.
-- 5 ships of different sizes:
-  - 1 Aircraft Carrier (5 cells)
-  - 1 Battleship (4 cells)
-  - 1 Cruiser (3 cells)
-  - 1 Submarine (3 cells)
-  - 1 Destroyer (2 cells)
+## Purpose of This Branch
 
-## Game Setup
+- Implement boat placement logic for both players’ grids.  
+- Provide verifications to ensure valid placement (boundaries, collisions, orientation).  
+- Mark boats on the grids so the game is ready to start.  
+- Provide a structured, isolated environment to handle pre-game setup.  
+- Serve as a reference for understanding the preparation phase of the game.
 
-1. **Placing Ships**: Each player secretly places their ships on their grid. Ships may be placed horizontally or vertically, but **not diagonally**.
-2. Ships must not overlap and must not touch each other (optional rule depending on game version).
-3. Ship placement must remain **hidden** from the opponent.
+---
 
-## How to Play
+## Features Included
 
-1. **Taking Turns**: Players take turns calling out a coordinate on the opponent’s grid (e.g., `A5`) to fire a shot.
-2. **Opponent's Response**:
-   - If the shot hits a ship, the opponent announces **"Hit"**.
-   - If the shot misses, the opponent announces **"Miss"** (or "Water").
-3. When all cells of a ship have been hit, the opponent announces **"Ship sunk"**.
+### 1. Boat Placement System
+- Accepts starting coordinates from the player (e.g., `A1`, `C5`).  
+- Supports both orientations:
+  - **Horizontal (H)**  
+  - **Vertical (B)**  
+- Performs **boundary checks** to ensure boats fit inside the grid.  
+- Performs **collision checks** to prevent overlapping boats.  
+- Marks the grid with a unique identifier for each boat type.
 
-## End of the Game
+### 2. Grid Management
+- Updates the player’s grid after each successful placement.  
+- Keeps track of empty cells to prevent illegal placement.  
+- Supports multiple boats of different sizes:
+  - Aircraft Carrier  
+  - Cruiser  
+  - Destroyer  
+  - Submarine  
+  - Torpedo Boat
 
-The game ends when one player has successfully sunk all of the opponent’s ships.  
-The player who sinks all enemy ships first is declared the winner.
+### 3. Player Setup Workflow
+- Prompts players in sequence to place all their boats.  
+- Provides error messages for invalid coordinates or placements.  
+- Ensures both players’ grids are fully prepared before the game starts.  
 
-## Additional Rules
+---
 
-- **One shot per turn.** A player may not fire at the same coordinate twice.
-- **Ship visibility:** Once a ship is sunk, the entire ship’s position is revealed (optional).
-- **Fair play:** Players must follow placement and shooting rules—no cheating.
-- **Optional rule:** Add sonar or radar abilities for more advanced gameplay.
+## Intended Audience
 
-## Strategy Tips
+This branch is designed for:
 
-- Vary ship placement to make your layout harder to guess.
-- Avoid placing ships too close together, unless you want to mislead your opponent.
-- Keep track of previous shots to predict your opponent’s strategy.
+- Developers implementing the pre-game setup mechanics.  
+- Contributors who need to understand the logic of player preparation.  
+- New team members reviewing how boats are added to grids.  
+- Anyone preparing to extend or modify the game setup phase.
 
-Good luck and have fun!
+---
+
+## How to Use This Branch
+
+- Follow the step-by-step boat placement prompts to position all boats.  
+- Check that grids are correctly updated after each placement.  
+- Use this branch as a base for integrating the attack and gameplay logic.  
+- Refer to it when debugging pre-game setup issues or verifying boat positions.
